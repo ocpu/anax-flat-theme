@@ -1,0 +1,40 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+html.hgrid body,
+body.route-typography {
+    background-image: url(../img/grid/horisontal-grid-24.png);
+}
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+    
+}
+
+@colorH1BorderBottom: #3c65ad;
+@colorH2BorderBottom: #6495ed;
+@borderSizeH1: 2px;
+@borderSizeH2: 2px;
+
+.flash-wrap {
+    @height: 12em;
+    height: @height;
+    .calcMargin(@height);
+    margin-top: @margin;
+    margin-bottom: @margin;
+
+    img {
+        height: @height;
+    }
+}
+
+.breadcrumb-list ul {
+    margin: 0;
+}
