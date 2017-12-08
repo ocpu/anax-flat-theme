@@ -7,6 +7,7 @@ html.hgrid body,
 body.route-typography {
     background-image: url(../img/grid/horisontal-grid-24.png);
 }
+
 body {
     .font();
     .typographyHeadings();
@@ -15,18 +16,16 @@ body {
     .typographyListElements();
     .typographyTableElements();
     .typographyOtherElements();
-    
 }
 
-@colorH1BorderBottom: #3c65ad;
-@colorH2BorderBottom: #6495ed;
 @borderSizeH1: 2px;
 @borderSizeH2: 2px;
 
 .flash-wrap {
     @height: 12em;
-    height: @height;
     .calcMargin(@height);
+    
+    height: @height;
     margin-top: @margin;
     margin-bottom: @margin;
 
@@ -37,4 +36,18 @@ body {
 
 .breadcrumb-list ul {
     margin: 0;
+}
+
+.after-main > .content {
+    @height: 12em;
+    .calcMargin(@height);
+    figure {
+        height: @height;
+        margin-top: @margin;
+        margin-bottom: @margin - 2;
+        img {
+            height: @height;
+            width: @height * (3/4);
+        }
+    }
 }

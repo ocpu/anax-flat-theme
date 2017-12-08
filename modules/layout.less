@@ -1,4 +1,4 @@
-@import url(grid-float.less);
+@import url(grid.less);
 
 html.vgrid .inner-wrap {
     .showGrid(960px);
@@ -17,7 +17,7 @@ html.vgrid .inner-wrap {
     }
 
     .navbar2 {
-        .column(10);
+        .column(18);
     }
 
     @media screen and (max-width: 943px) {
@@ -40,7 +40,7 @@ html.vgrid .inner-wrap {
         }    
     }
     
-    @media screen and (max-width: 545px) {
+    @media screen and (max-width: 673px) {
         .site-logo-text {
             .column(18)
         }
@@ -48,6 +48,13 @@ html.vgrid .inner-wrap {
         .navbar2 {
             display: none;
         }    
+    }
+    .rm-navbar-max {
+        display: none;
+
+        @media screen and (max-width: 673px) {
+            display: block;
+        }
     }
 }
 
@@ -64,16 +71,7 @@ html.vgrid .inner-wrap {
 .after-main,
 .footer {
     .column(24);
-    // display: flex;
-    
-    // margin-left: 5px;
-    // margin-right: 5px;
     max-width: 960px;
-}
-
-.main {
-    // margin-left: 10px;
-    // margin-right: 10px;
 }
 
 .figure {
